@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Welding Assistant</string>
+    <string name="btn_menu1">Тип соединения</string>
 </resources>
