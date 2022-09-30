@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Welding Assistant</string>
-    <string name="btn_menu1">Тип соединения</string>
+    <string name="btn_menu1">Положение сварки</string>
+    <string name="btn_menu2">Тип металла</string>
+    <string name="btn_menu3">Толщина металла</string>
+    <string name="btn_menu4">Диаметр электрода</string>
+    <string name="btn_menu5">Рассчитать</string>
+    <string name="btn_menu1r1">Горизонтальное</string>
+    <string name="btn_menu1r2">Вертикальное</string>
+    <string name="btn_menu1r3">Потолочное</string>
+    <string name="btn_menu2r1">Чугун, сталь, цветной металл</string>
+    <string name="btn_menu2r2">Тонкий металл или сплав</string>
+    <string name="btn_menu3r1">2мм</string>
+    <string name="btn_menu3r2">2,5мм</string>
+    <string name="btn_menu3r3">3мм</string>
+    <string name="btn_menu3r4">4мм</string>
+
+
 </resources>
