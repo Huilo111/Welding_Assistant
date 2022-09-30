@@ -145,12 +145,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnGG.setOnClickListener(view -> {
-            if (!TextUtils.isEmpty(editTextNumber.getText().toString())) {
-                double met = Integer.valueOf(editTextNumber.getText().toString());
+            if ((!TextUtils.isEmpty(editTextNumber.getText().toString())) && (Polozenie != 0) && (Metaltip) != 0 && (Elektrod != 0)) {
                 choose1.setVisibility(View.GONE);
                 choose2.setVisibility(View.GONE);
                 choose3.setVisibility(View.GONE);
-                search(met);
+                search();
                 if (Metaltip == 1) {
                     textOut.setText("Значение тока " + I.toString() + "\nПрямая полярность");
                 } else {
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
         mToast.show();
     }
 
-    private void search(double met) {
+    private void search() {
         /*
         Polozenie - номер положения сварки
         Elektrod - диаметр электрода
@@ -185,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
         При диаметре электрода 3мм - толщина металла от 3 до 4 мм
         При диаметре электрода 4мм - толщина металла от 4 до 10 мм
          */
+        Double met = Double.valueOf(editTextNumber.getText().toString());
+        Log.d("gg", met.toString());
         if ((Polozenie == 0) || (met == 0)) {
             //Log.d("GG", "ЕБЛАН");
         } else {
