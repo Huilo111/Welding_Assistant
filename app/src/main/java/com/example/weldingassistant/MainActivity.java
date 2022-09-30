@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Integer Elektrod = 0;
     private Double I;
     private EditText editTextNumber;
+    private TextView textOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         choose3 = findViewById(R.id.choose3);
         editTextNumber = findViewById(R.id.editTextNumber);
         btnGG = findViewById(R.id.btnGG);
+        textOut = findViewById(R.id.textOut);
 
     }
 
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         btnMenu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textOut.setVisibility(View.GONE);
                 if (choose1.getVisibility() == View.GONE) {
                     choose1.setVisibility(View.VISIBLE);
                 } else {
@@ -88,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         btnMenu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textOut.setVisibility(View.GONE);
                 if (choose2.getVisibility() == View.GONE) {
                     choose2.setVisibility(View.VISIBLE);
                 } else {
@@ -111,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         btnMenu3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textOut.setVisibility(View.GONE);
                 if (choose3.getVisibility() == View.GONE) {
                     choose3.setVisibility(View.VISIBLE);
                 } else {
@@ -137,8 +143,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnGG.setOnClickListener(view -> {
+            choose1.setVisibility(View.GONE);
+            choose2.setVisibility(View.GONE);
+            choose3.setVisibility(View.GONE);
             search();
-            Log.d("gg", I.toString());
+            textOut.setText("Значение тока " + I.toString());
+            textOut.setVisibility(View.VISIBLE);
+            //Log.d("gg", I.toString());
         });
 
     }
@@ -157,10 +168,8 @@ public class MainActivity extends AppCompatActivity {
          */
         double met = Integer.valueOf(editTextNumber.getText().toString());
         if ((Polozenie == 0) || (met == 0)) {
-            Log.d("GG", "ЕБЛАН");
+            //Log.d("GG", "ЕБЛАН");
         } else {
-            //ЕБАТЬЬЬЬЬ
-            Log.d("GG", "Хороший мальчик");
             if (Polozenie == 1) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);

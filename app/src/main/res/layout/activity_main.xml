@@ -134,7 +134,6 @@
         android:text="@string/btn_menu5"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -210,5 +209,17 @@
                 android:text="@string/btn_menu2r2" />
         </RadioGroup>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:textColor="#FF0000"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

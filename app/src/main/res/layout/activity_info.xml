@@ -7,4 +7,16 @@
     android:background="@drawable/background"
     tools:context=".InfoActivity">
 
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="233dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_all"
+        android:layout_marginBottom="32dp"
+        android:text="Назад"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
