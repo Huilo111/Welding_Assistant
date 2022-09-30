@@ -16,12 +16,12 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnInfo, btnMenu1, btnMenu2, btnMenu3, btnGG;
-    private LinearLayout choose1,choose2, choose3;
-    private RadioButton radioButton1, radioButton2, radioButton3,radioButton4,radioButton5,radioButton6,radioButton7,radioButton8,radioButton9;
+    private LinearLayout choose1, choose2, choose3;
+    private RadioButton radioButton1, radioButton2, radioButton3, radioButton4, radioButton5, radioButton6, radioButton7, radioButton8, radioButton9;
     private Integer Polozenie = 0;
     private Integer Metaltip = 0;
     private Integer Elektrod = 0;
-    private int I;
+    private Double I;
     private EditText editTextNumber;
 
     @Override
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         init();
         axaxa();
     }
-    private void init(){
+
+    private void init() {
         btnInfo = findViewById(R.id.btnInfo);
         btnMenu1 = findViewById(R.id.btnMenu1);
         btnMenu2 = findViewById(R.id.btnMenu2);
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         btnGG = findViewById(R.id.btnGG);
 
     }
-    private void axaxa(){
+
+    private void axaxa() {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (choose1.getVisibility() == View.GONE) {
                     choose1.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     choose1.setVisibility(View.GONE);
                 }
             }
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (choose2.getVisibility() == View.GONE) {
                     choose2.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     choose2.setVisibility(View.GONE);
                 }
             }
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (choose3.getVisibility() == View.GONE) {
                     choose3.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     choose3.setVisibility(View.GONE);
                 }
             }
@@ -136,10 +138,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnGG.setOnClickListener(view -> {
             search();
+            Log.d("gg", I.toString());
         });
 
     }
-    private void search(){
+
+    private void search() {
         /*
         Polozenie - номер положения сварки
         Elektrod - диаметр электрода
@@ -152,62 +156,52 @@ public class MainActivity extends AppCompatActivity {
         При диаметре электрода 4мм - толщина металла от 4 до 10 мм
          */
         double met = Integer.valueOf(editTextNumber.getText().toString());
-        if ((Polozenie == 0) || (met == 0)){
+        if ((Polozenie == 0) || (met == 0)) {
             Log.d("GG", "ЕБЛАН");
-        }else {
+        } else {
             //ЕБАТЬЬЬЬЬ
             Log.d("GG", "Хороший мальчик");
-            if (Polozenie == 1){
-                if ((Elektrod == 1) && (met >=1.5) && (met <= 2)){
+            if (Polozenie == 1) {
+                if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
-                }
-                else if ((Elektrod == 2) && (met >=2) && (met <= 3)){
-                    if (met < 3){
-                        I = 60+ ((met % 10) * 2);
+                } else if ((Elektrod == 2) && (met >= 2) && (met <= 3)) {
+                    if (met < 3) {
+                        I = 60 + ((met % 10) * 2);
+                    } else {
+                        I = 80.0;
                     }
-                    else{
-                        I = 80;
-                    }
-                }
-                else if ((Elektrod == 3) && (met >= 3) && (met <= 4)){
-                    if (met < 4){
+                } else if ((Elektrod == 3) && (met >= 3) && (met <= 4)) {
+                    if (met < 4) {
                         I = 80 + ((met % 10) * 8);
+                    } else {
+                        I = 160.0;
                     }
-                    else{
-                        I = 160;
-                    }
-                }
-                else if ((Elektrod == 4) && (met >= 4) && (met <= 10)){
+                } else if ((Elektrod == 4) && (met >= 4) && (met <= 10)) {
                     I = 120 + (18 * (met - 4));
                 }
             }
             /*
         ПРИ ПОЛОЖЕНИИ 2 ИЗ I ВЫЧИТАЕМ 10 ПРОЦЕНТОВ
          */
-            else if (Polozenie == 2){
-                if ((Elektrod == 1) && (met >=1.5) && (met <= 2)){
+            else if (Polozenie == 2) {
+                if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
                     I = I - (I / 10);
-                }
-                else if ((Elektrod == 2) && (met >=2) && (met <= 3)){
-                    if (met < 3){
-                        I = 60+ ((met % 10) * 2);
+                } else if ((Elektrod == 2) && (met >= 2) && (met <= 3)) {
+                    if (met < 3) {
+                        I = 60 + ((met % 10) * 2);
                         I = I - (I / 10);
+                    } else {
+                        I = 72.0;
                     }
-                    else{
-                        I = 72;
-                    }
-                }
-                else if ((Elektrod == 3) && (met >= 3) && (met <= 4)){
-                    if (met < 4){
+                } else if ((Elektrod == 3) && (met >= 3) && (met <= 4)) {
+                    if (met < 4) {
                         I = 80 + ((met % 10) * 8);
                         I = I - (I / 10);
+                    } else {
+                        I = 144.0;
                     }
-                    else{
-                        I = 144;
-                    }
-                }
-                else if ((Elektrod == 4) && (met >= 4) && (met <= 10)){
+                } else if ((Elektrod == 4) && (met >= 4) && (met <= 10)) {
                     I = 120 + (18 * (met - 4));
                     I = I - (I / 10);
                 }
@@ -216,36 +210,31 @@ public class MainActivity extends AppCompatActivity {
             /*
         ПРИ ПОЛОЖЕНИИ 3 ИЗ I ВЫЧИТАЕМ 20 ПРОЦЕНТОВ
          */
-            else if (Polozenie == 3){
-                if ((Elektrod == 1) && (met >=1.5) && (met <= 2)){
+            else if (Polozenie == 3) {
+                if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
                     I = I - (I / 20);
-                }
-                else if ((Elektrod == 2) && (met >=2) && (met <= 3)){
-                    if (met < 3){
-                        I = 60+ ((met % 10) * 2);
+                } else if ((Elektrod == 2) && (met >= 2) && (met <= 3)) {
+                    if (met < 3) {
+                        I = 60 + ((met % 10) * 2);
                         I = I - (I / 20);
+                    } else {
+                        I = 64.0;
                     }
-                    else{
-                        I = 64;
-                    }
-                }
-                else if ((Elektrod == 3) && (met >= 3) && (met <= 4)){
-                    if (met < 4){
+                } else if ((Elektrod == 3) && (met >= 3) && (met <= 4)) {
+                    if (met < 4) {
                         I = 80 + ((met % 10) * 8);
                         I = I - (I / 20);
+                    } else {
+                        I = 128.0;
                     }
-                    else{
-                        I = 128;
-                    }
-                }
-                else if ((Elektrod == 4) && (met >= 4) && (met <= 10)){
+                } else if ((Elektrod == 4) && (met >= 4) && (met <= 10)) {
                     I = 120 + (18 * (met - 4));
                     I = I - (I / 20);
                 }
+            }
+
         }
-
     }
-
 }
 

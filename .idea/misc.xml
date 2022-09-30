@@ -6,10 +6,15 @@
         <entry key="..\:/Users/Egor/AndroidStudioProjects/WeldingAssistant/app/src/main/res/drawable/btn_menu.xml" value="0.1735" />
         <entry key="..\:/Users/Egor/AndroidStudioProjects/WeldingAssistant/app/src/main/res/layout/activity_info.xml" value="0.2" />
         <entry key="..\:/Users/Egor/AndroidStudioProjects/WeldingAssistant/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Welding_Assistant/app/src/main/res/drawable/btn_all.xml" value="0.255" />
+        <entry key="..\:/Welding_Assistant/app/src/main/res/drawable/btn_no.xml" value="0.255" />
+        <entry key="..\:/Welding_Assistant/app/src/main/res/drawable/btn_up.xml" value="0.255" />
+        <entry key="..\:/Welding_Assistant/app/src/main/res/layout/activity_info.xml" value="0.18802083333333333" />
+        <entry key="..\:/Welding_Assistant/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

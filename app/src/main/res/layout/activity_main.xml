@@ -11,12 +11,12 @@
         android:id="@+id/btnMenu3"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/btn_main"
+        android:background="@drawable/btn_no"
         android:text="@string/btn_menu4"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
@@ -25,12 +25,12 @@
         android:layout_width="374dp"
         android:layout_height="69dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#494848"
+        android:background="@drawable/btn_all"
         android:text="@string/app_name"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:cornerRadius="20dp"
-        app:icon="@android:drawable/ic_menu_info_details"
+        android:drawableStart="@android:drawable/ic_menu_info_details"
         app:iconSize="46dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +39,11 @@
     <Button
         android:id="@+id/btnMenu1"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/btn_main"
+        android:background="@drawable/btn_up"
         android:text="@string/btn_menu1"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,21 +52,18 @@
 
     <LinearLayout
         android:id="@+id/choose1"
-        android:layout_width="238dp"
-        android:layout_height="164dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/btnMenu1"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnMenu1"
         app:layout_constraintTop_toBottomOf="@+id/btnMenu1">
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="164dp">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radioButton1"
@@ -91,9 +89,10 @@
     <Button
         android:id="@+id/btnMenu2"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/btn_main"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_no"
         android:text="@string/btn_menu2"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,8 +101,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="242dp"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:background="@color/btn_main"
         android:text="@string/btn_menu3"
         android:textColor="@color/white"
@@ -130,8 +130,9 @@
         android:layout_width="233dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#494848"
+        android:background="@drawable/btn_all"
         android:text="@string/btn_menu5"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,8 +141,8 @@
 
     <LinearLayout
         android:id="@+id/choose3"
-        android:layout_width="246dp"
-        android:layout_height="195dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
         android:visibility="gone"
@@ -151,7 +152,7 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radioButton6"
@@ -182,19 +183,19 @@
 
     <LinearLayout
         android:id="@+id/choose2"
-        android:layout_width="239dp"
-        android:layout_height="85dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/white"
         android:orientation="vertical"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/btnMenu2"
         app:layout_constraintStart_toStartOf="@+id/btnMenu2"
         app:layout_constraintTop_toBottomOf="@+id/btnMenu2">
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radioButton4"
