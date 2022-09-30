@@ -147,7 +147,11 @@ public class MainActivity extends AppCompatActivity {
             choose2.setVisibility(View.GONE);
             choose3.setVisibility(View.GONE);
             search();
-            textOut.setText("Значение тока " + I.toString());
+            if (Metaltip == 1){
+                textOut.setText("Значение тока " + I.toString() + "\nПрямая полярность");
+            } else {
+                textOut.setText("Значение тока " + I.toString() + "\nОбратная полярность");
+            }
             textOut.setVisibility(View.VISIBLE);
             //Log.d("gg", I.toString());
         });
