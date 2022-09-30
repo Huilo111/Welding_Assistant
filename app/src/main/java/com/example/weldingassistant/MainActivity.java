@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Double I = 0.0;
     private EditText editTextNumber;
     private TextView textOut;
+    private Toast mToast = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,22 +145,35 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnGG.setOnClickListener(view -> {
-            choose1.setVisibility(View.GONE);
-            choose2.setVisibility(View.GONE);
-            choose3.setVisibility(View.GONE);
-            search();
-            if (Metaltip == 1){
-                textOut.setText("Значение тока " + I.toString() + "\nПрямая полярность");
-            } else {
-                textOut.setText("Значение тока " + I.toString() + "\nОбратная полярность");
+            if (!TextUtils.isEmpty(editTextNumber.getText().toString())) {
+                double met = Integer.valueOf(editTextNumber.getText().toString());
+                choose1.setVisibility(View.GONE);
+                choose2.setVisibility(View.GONE);
+                choose3.setVisibility(View.GONE);
+                search(met);
+                if (Metaltip == 1) {
+                    textOut.setText("Значение тока " + I.toString() + "\nПрямая полярность");
+                } else {
+                    textOut.setText("Значение тока " + I.toString() + "\nОбратная полярность");
+                }
+                textOut.setVisibility(View.VISIBLE);
+            }else {
+                showToast("Введите данные");
             }
-            textOut.setVisibility(View.VISIBLE);
-            //Log.d("gg", I.toString());
         });
 
     }
 
-    private void search() {
+    private void showToast(String tStr){
+        if(mToast != null)
+            mToast.cancel();
+        mToast = Toast.makeText(getApplicationContext(),
+                tStr,
+                Toast.LENGTH_SHORT);
+        mToast.show();
+    }
+
+    private void search(double met) {
         /*
         Polozenie - номер положения сварки
         Elektrod - диаметр электрода
@@ -170,7 +185,6 @@ public class MainActivity extends AppCompatActivity {
         При диаметре электрода 3мм - толщина металла от 3 до 4 мм
         При диаметре электрода 4мм - толщина металла от 4 до 10 мм
          */
-        double met = Integer.valueOf(editTextNumber.getText().toString());
         if ((Polozenie == 0) || (met == 0)) {
             //Log.d("GG", "ЕБЛАН");
         } else {
