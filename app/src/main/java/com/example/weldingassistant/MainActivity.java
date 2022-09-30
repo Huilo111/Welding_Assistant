@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btnInfo, btnMenu1, btnMenu2, btnMenu3, btnGG;
     private LinearLayout choose1, choose2, choose3;
     private RadioButton radioButton1, radioButton2, radioButton3, radioButton4, radioButton5, radioButton6, radioButton7, radioButton8, radioButton9;
-    private Integer Polozenie = 0;
-    private Integer Metaltip = 0;
-    private Integer Elektrod = 0;
-    private Double I;
+    private static Integer Polozenie = 0;
+    private static Integer Metaltip = 0;
+    private static Integer Elektrod = 0;
+    private Double I = 0.0;
     private EditText editTextNumber;
     private TextView textOut;
 
