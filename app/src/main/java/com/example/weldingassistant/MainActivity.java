@@ -102,11 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        /*
-        Тип металла влияет только на полярнось
-        если выбран ПЕРВЫЙ тип металла, то ПОЛЯРНОСТЬ ПРЯМАЯ
-        если выбран ВТОРОЙ тип металла, то ПОЛЯРНОСТЬ ОБРАТНАЯ
-         */
         radioButton4.setOnClickListener(view -> {
             Metaltip = 1;
             choose2.setVisibility(View.GONE);
@@ -186,8 +181,6 @@ public class MainActivity extends AppCompatActivity {
          */
         Double met = Double.valueOf(editTextNumber.getText().toString());
         Log.d("gg", met.toString());
-        if ((Polozenie == 0) || (met == 0)) {
-        } else {
             if (Polozenie == 1) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
@@ -207,9 +200,6 @@ public class MainActivity extends AppCompatActivity {
                     I = 120 + (18 * (met - 4));
                 }
             }
-            /*
-        ПРИ ПОЛОЖЕНИИ 2 ИЗ I ВЫЧИТАЕМ 10 ПРОЦЕНТОВ
-         */
             else if (Polozenie == 2) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
@@ -234,9 +224,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-            /*
-        ПРИ ПОЛОЖЕНИИ 3 ИЗ I ВЫЧИТАЕМ 20 ПРОЦЕНТОВ
-         */
             else if (Polozenie == 3) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
@@ -263,5 +250,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-}
+
 
