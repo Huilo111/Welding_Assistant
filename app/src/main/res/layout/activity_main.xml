@@ -10,15 +10,15 @@
     <Button
         android:id="@+id/btnMenu3"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@drawable/btn_no"
         android:text="@string/btn_menu4"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/choose2" />
 
     <Button
         android:id="@+id/btnInfo"
@@ -26,12 +26,12 @@
         android:layout_height="69dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_all"
+        android:drawableStart="@android:drawable/ic_menu_info_details"
         android:text="@string/app_name"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:cornerRadius="20dp"
-        android:drawableStart="@android:drawable/ic_menu_info_details"
-        app:iconSize="46dp"
+        app:iconSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,12 +39,12 @@
     <Button
         android:id="@+id/btnMenu1"
         android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_up"
         android:text="@string/btn_menu1"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
     <LinearLayout
         android:id="@+id/choose1"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:background="@color/white"
         android:orientation="vertical"
         android:visibility="gone"
@@ -62,25 +62,25 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMenu1">
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="240dp"
+            android:layout_height="120dp">
 
             <RadioButton
                 android:id="@+id/radioButton1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu1r1" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu1r2" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu1r3" />
 
         </RadioGroup>
@@ -89,11 +89,11 @@
     <Button
         android:id="@+id/btnMenu2"
         android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@drawable/btn_no"
         android:text="@string/btn_menu2"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,16 +102,16 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:gravity="center"
+        android:layout_height="50dp"
         android:background="@color/btn_main"
+        android:gravity="center"
         android:text="@string/btn_menu3"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/choose2"
-        app:layout_constraintStart_toStartOf="@+id/choose2"
-        app:layout_constraintTop_toBottomOf="@+id/choose2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose3" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -127,7 +127,7 @@
 
     <Button
         android:id="@+id/btnGG"
-        android:layout_width="233dp"
+        android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/btn_all"
@@ -141,7 +141,7 @@
     <LinearLayout
         android:id="@+id/choose3"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:background="@color/white"
         android:orientation="vertical"
         android:visibility="gone"
@@ -150,32 +150,32 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMenu3">
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="240dp"
+            android:layout_height="160dp">
 
             <RadioButton
                 android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu3r1" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu3r2" />
 
             <RadioButton
                 android:id="@+id/radioButton8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:minHeight="48dp"
                 android:text="@string/btn_menu3r3" />
 
             <RadioButton
                 android:id="@+id/radioButton9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu3r4" />
         </RadioGroup>
     </LinearLayout>
@@ -183,8 +183,7 @@
     <LinearLayout
         android:id="@+id/choose2"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:background="@color/white"
         android:orientation="vertical"
         android:visibility="gone"
@@ -193,19 +192,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMenu2">
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="240dp"
+            android:layout_height="80dp">
 
             <RadioButton
                 android:id="@+id/radioButton4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu2r1" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
                 android:text="@string/btn_menu2r2" />
         </RadioGroup>
     </LinearLayout>
@@ -215,9 +214,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:background="@color/btn_main"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:visibility="gone"
-        android:textColor="#FF0000"
-        android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/btnGG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

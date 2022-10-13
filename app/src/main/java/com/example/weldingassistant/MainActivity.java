@@ -187,7 +187,6 @@ public class MainActivity extends AppCompatActivity {
         Double met = Double.valueOf(editTextNumber.getText().toString());
         Log.d("gg", met.toString());
         if ((Polozenie == 0) || (met == 0)) {
-            //Log.d("GG", "ЕБЛАН");
         } else {
             if (Polozenie == 1) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
@@ -241,24 +240,24 @@ public class MainActivity extends AppCompatActivity {
             else if (Polozenie == 3) {
                 if ((Elektrod == 1) && (met >= 1.5) && (met <= 2)) {
                     I = 40 * (met - 0.5);
-                    I = I - (I / 20);
+                    I = I - (I * 0.2);
                 } else if ((Elektrod == 2) && (met >= 2) && (met <= 3)) {
                     if (met < 3) {
                         I = 60 + ((met % 10) * 2);
-                        I = I - (I / 20);
+                        I = I - (I * 0.2);
                     } else {
                         I = 64.0;
                     }
                 } else if ((Elektrod == 3) && (met >= 3) && (met <= 4)) {
                     if (met < 4) {
                         I = 80 + ((met % 10) * 8);
-                        I = I - (I / 20);
+                        I = I - (I * 0.2);
                     } else {
                         I = 128.0;
                     }
                 } else if ((Elektrod == 4) && (met >= 4) && (met <= 10)) {
                     I = 120 + (18 * (met - 4));
-                    I = I - (I / 20);
+                    I = I - (I * 0.2);
                 }
             }
 
