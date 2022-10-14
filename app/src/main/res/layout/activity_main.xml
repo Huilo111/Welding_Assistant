@@ -99,7 +99,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose1" />
 
-    <TextView
+    <Button
         android:id="@+id/textView"
         android:layout_width="240dp"
         android:layout_height="50dp"
